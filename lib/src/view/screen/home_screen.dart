@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TODO "),
+        title: Text("TODO"),
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                 ),
                 subtitle: Text(
-                  '${CommonUtils().yearDateMonthTimeFormat(todoController.selectedDate.value)}',
+                  '${CommonUtils().yearDateMonthTimeFormat(DateTime.tryParse(todoController.todos[index].remainder)!)}',
                   style: TextStyle(
                     fontSize: 15.0,
                     color: Colors.black38,
